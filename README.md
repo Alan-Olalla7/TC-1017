@@ -1,5 +1,3 @@
-//# TC-1017
-With great code comes great responsibility//
 #include <iostream>
 using namespace std;
 void newLine ()
