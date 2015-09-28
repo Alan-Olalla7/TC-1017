@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int a, b;
+	int sum = 0;
+	int number = a;
+	cout << "Hello i'm HAL 900, i'm gonna give you a prove of my power" <<endl;
+	cout << "Give me two integers numbers and I will make the sum of the range between those numbers"<< endl;
+	cout << "Only remember that in this case, the second number must be bigger than the first" << endl;
+	cout << "First number: "; cin >> a;
+	cout << "Second number: "; cin >> b;
+	while (number <= b){
+	sum = sum + number;
+	number ++ ;
+	}
+	cout << "The sum of the range you ask is: " << sum << endl;
+	cout << "See, I'm the best"; 
+}
