@@ -1,0 +1,28 @@
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+using namespace std;
+int main ()
+{
+  int y;
+  srand (time(NULL));
+  int x = rand()%100+1;
+  cout <<"I'm thinking about a number between 0 and 100"<< endl;
+  cout <<"Try and guess the number: "; cin>>y;
+  while (y!=x)
+  {
+    if (y>x)
+    {
+      cout <<"This value is too high, please try again: "; cin>>y;
+    }
+    if (y<x)
+    {
+      cout <<"This value is too low, please try again: "; cin>>y;
+    }
+    if (y==x)
+    {
+      cout <<"Congratulations! You've guessed my number..."<< endl;
+    }
+  }
+  return 0;
+}
