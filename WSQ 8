@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+int add (int x, int y)
+{
+return x+y;
+}
+int sub (int x, int y)
+{
+return x-y;
+}
+int mult (int x, int y)
+{
+return x*y;
+}
+int div (int x, int y)
+{
+return x/y;
+}
+int remn (int x, int y)
+{
+return x%y;
+}
+int main ()
+{
+int x; int y;
+cout<<"Please write a number: "; cin>>x;
+cout<<"Please write another number: "; cin>>y;
+cout<<"If you add them, you'll get "<< add (x,y)<< endl;
+cout<<"If you subtract those, the result is "<< sub (x,y)<< endl;
+cout<<"Then comes the multiplication: "<< mult (x,y)<< endl;
+cout<<"A division would yield "<< div (x,y)<< endl;
+cout<<"And finally the remainder is: "<< remn (x,y)<< endl;
+return 0;
+}
