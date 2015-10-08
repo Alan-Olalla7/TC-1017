@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+long superpower (long a, long b) {
+  long i, x;
+  i = 1;
+  x = 1;
+  while (i <= b) {
+    x = x*a;
+    i++;
+  }
+  return x;
+}
+int main ()
+{
+  cout<<superpower (3,4)<<endl;
+  return 0;
+}
