@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+using namespace std;
+long factorial (long n)
+{
+	if (n==0) {
+	return 1;
+	} else {
+	long recurse = factorial (n-1);
+	long result = n * recurse;
+	return result;
+	}
+}
+int main ()
+{
+long n;
+string tellMe;
+cout<<"We're gonna have fun with factorials!"<<endl;
+cout<<"Now, give me a positive integer"<<endl;
+cin>>n;
+cout<<"This is the factorial: "<<factorial (n)<<endl;
+cout<<"Would you like to try again? (yes/no)"<<endl;
+cin>>tellMe;
+if (tellMe == "yes") {
+long n;
+string tellMe;
+cout<<"What's your new integer?"<<endl;
+cin>>n;
+cout<<"This is the factorial: "<<factorial (n)<<endl;
+cout<<"Would you like to try again? (yes/no)"<<endl;
+cin>>tellMe;
+} else if (tellMe == "no") {
+cout<<"Have a nice day!"<<endl;
+}
+return 0;
+}
