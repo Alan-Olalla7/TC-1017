@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int sumsquare_list(vector <int> sq)
+{
+int sig = 0;
+int i;
+for(i=0; i<sq.size(); i++){
+  sig = sig + (sq[i] * sq[i]);
+}
+return sig;
+}
+int main()
+{
+  vector <int> sq (5);
+  sq [0] = 1;
+  sq [1] = 2;
+  sq [2] = 3;
+  sq [3] = 4;
+  sq [4] = 5;
+  cout <<"The addition of the squares of numbers 1 to 5 yields: "<<sumsquare_list(sq)<<endl;
+return 0;
+}
