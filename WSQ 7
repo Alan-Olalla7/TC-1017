@@ -2,18 +2,16 @@
 using namespace std;
 int main()
 {
-	int a, b;
-	int sum = 0;
-	int number = a;
-	cout << "Hello i'm HAL 900, i'm gonna give you a prove of my power" <<endl;
-	cout << "Give me two integers numbers and I will make the sum of the range between those numbers"<< endl;
-	cout << "Only remember that in this case, the second number must be bigger than the first" << endl;
-	cout << "First number: "; cin >> a;
-	cout << "Second number: "; cin >> b;
-	while (number <= b){
-	sum = sum + number;
-	number ++ ;
-	}
-	cout << "The sum of the range you ask is: " << sum << endl;
-	cout << "See, I'm the best"; 
+ int a, b;
+ int add=0;
+ int i=a;
+ cout << "Proceed to type two numbers. We will calculate the integer addition of the range [n1, n2]"<< endl;
+ cout << "Let your n2 be greater than your n1" << endl;
+ cout << "First number: "; cin>>a;
+ cout << "Second number: "; cin>>b;
+ while (i<=b) {
+ add=add+i;
+ i++;
+ }
+  cout << "The sum of the range you ask is: "<<add<<endl;
 }
