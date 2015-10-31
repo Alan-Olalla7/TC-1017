@@ -7,7 +7,7 @@ int main()
 {
   vector <int> num;
   int x, i, l;
-  cout<<"Write some numbers. We will take them and get their average and their standard deviation. Also, input '00' when you are done writing numbers."<<endl;
+  cout<<"Write some numbers. We will take them add them up, get their average and their standard deviation. Also, please input '00' when you are done writing numbers."<<endl;
   cin>>x;
   while (x!=00) {
     num.push_back(x);
@@ -22,14 +22,14 @@ int main()
   float add=accumulate(num.begin(),num.end(),0.0);
   cout<<add<<endl;
   cout<<"The average is: ";
-  float average=(add/l);
-  cout<<average<<endl;
+  float avg=(add/l);
+  cout<<avg<<endl;
   float stdv=0;
   for(i=0; i<l; i++) {
-    stdv=stdv+(average-num[i])*(average-num[i]);
+    stdv=stdv+(avg-num[i])*(avg-num[i]);
     }
   stdv=stdv/l;
   stdv=sqrt(stdv);
-  cout<<"The standard deviation is "; stdv<<endl;
+  cout<<"The standard deviation is: "<<stdv<<endl;
   return 0;
 }
