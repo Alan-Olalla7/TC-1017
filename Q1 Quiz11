@@ -1,0 +1,21 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+float calculateE (float n)
+{
+float x=1.0f;
+float sigma = 1.0f;
+int i;
+    for (i=n-1; i>0; i--){
+      sigma=1+x*(sigma/i);
+    }
+    return sigma;
+}
+
+int main()
+{
+    float n;
+    cout <<"We will approximate e Enter the length you would like to approximate the value of e: ";cin>> n;
+    cout <<"Here is the approximation: "<<calculateE(n)<<endl;
+    return 0;
+}
