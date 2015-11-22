@@ -1,0 +1,53 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+using namespace std;
+int main()
+{
+string read;
+string banana = "banana";
+char readFile[50];
+int index=0;
+int index2=0;
+int count=0;
+cout<<"Which file am I looking for? ";
+cin>>readFile;
+ifstream read_file (readFile);
+if (read_file.is_open()) {
+while (getline(read_file,read)) {
+    index = 0;
+while (index<read.length()) {
+    char first = read[index];
+    if (first=='B'||first=='b') { // "||" in order for the program to take both cases //
+      index2=index++;
+    }
+    char second = read[index2];
+    if (second=='A'||second=='a') {
+      index2++;
+    }
+    char third = read[index2];
+    if (third=='N'||third=='n') {
+      index2++;
+    }
+    char fourth = read[index2];
+    if (fourth=='A'||fourth=='a') {
+        index2++;
+      }
+    char fifth = read[index2];
+    if (fifth=='N'||fifth=='n') {
+        index2++;
+      }
+    char sixth = read[index2];
+    if (sixth=='A'||sixth=='a') {
+        count++;
+      }
+        index=index++;
+}
+    }
+    read_file.close(); }
+    else {
+      cout<<"File unable to open, please try again."<<endl;
+    }
+cout<<"Found "<<count<<" coincidences."<<endl;
+return 0;
+}
