@@ -3,11 +3,11 @@
 using namespace std;
 float calculateE (float n)
 {
-float x=1.0f;
+float x=1.0f; // float 1.0f is initializer
 float sigma = 1.0f;
 int i;
     for (i=n-1; i>0; i--){
-      sigma=1+x*(sigma/i);
+      sigma=1+(x*sigma)/i; // form (1+1/n)^n
     }
     return sigma;
 }
@@ -15,7 +15,8 @@ int i;
 int main()
 {
     float n;
-    cout <<"We will approximate e Enter the length you would like to approximate the value of e: ";cin>> n;
-    cout <<"Here is the approximation: "<<calculateE(n)<<endl;
+    cout<<"We will approximate e with this program."<<endl;
+    cout<<"Enter a value. This will approximate e to the position of your value: ";cin>> n;
+    cout<<"e is worth: "<<calculateE(n)<<" at your position."<<endl;
     return 0;
 }
