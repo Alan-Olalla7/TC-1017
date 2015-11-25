@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <sstream>
+using namespace std;
+int main()
+{
+  string rec;
+  string pr;
+  string cmpg;
+  string hmpg;
+  int x=57;
+  float ct;
+  float avg_ct=0.0;
+  float hw;
+  float avg_hw=0.0;
+  float cost;
+  float avg_cost=0.0;
+  ifstream read_file("93cars.dat.txt");
+  if (read_file.is_open()) {
+    for (int i=0; i<93; i++) {
+      getline(read_file, rec);
+      pr=rec.substr(42,4);
+      istringstream buffer(pr);
+      buffer>>cost;
+      cmpg=rec.substr(52,2);
+      istringstream buffer2(cmpg);
+      buffer2>>ct;
+      hmpg=rec.substr(55,2);
+      istringstream buffer3(hmpg);
+      buffer3>>hw;
+      avg_cost=avg_cost+cost;
+      avg_ct=avg_ct+ct;
+      avg_hw=avg_hw+hw;
+      getline(read_file, rec);
+    }
+    read_file.close();
+  } else {
+    cout<<"Error 404. File not found."<<endl;
+  }
+  avg_cost=avg_cost/93;
+  avg_ct=avg_ct/93;
+  avg_hw=avg_hw/93;
+  cout<<"The average cost of the vehicles is: "<<avg_cost<<endl;
+  cout<<"The average gas mileage in the city is: "<<avg_ct<<endl;
+  cout<<"The average gas mileage in highways is: "<<avg_hw<<endl;
+  return 0;
+}
