@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int Great (int a, int b) {
+  int gcd;
+  while (a!=0) {
+    gcd=a;
+    a=b%a;
+    b=gcd;
+  }
+  return b;
+}
+int main()
+{
+  int a,b;
+  cout<<"We are going to calculate the Greatest Common Divisor of two numbers."<<endl;
+  cout<<"Write the first number: "; cin>>a;
+  cout<<"Now go ahead with the second one: "; cin>>b;
+  cout<<"The Greates Common Divisor between them is "<<Great(a,b)<<endl;
+  return 0;
+}
