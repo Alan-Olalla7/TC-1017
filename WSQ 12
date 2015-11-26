@@ -15,6 +15,6 @@ int main()
   cout<<"We are going to calculate the Greatest Common Divisor of two numbers."<<endl;
   cout<<"Write the first number: "; cin>>a;
   cout<<"Now go ahead with the second one: "; cin>>b;
-  cout<<"The Greates Common Divisor between them is "<<Great(a,b)<<endl;
+  cout<<"The Greatest Common Divisor between them is "<<Great(a,b)<<endl;
   return 0;
 }
