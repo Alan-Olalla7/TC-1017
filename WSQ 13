@@ -1,23 +1,24 @@
 #include <iostream>
+#include <stdlib.h>
 using namespace std;
-float sqrt (float n)
-{
-  float x = n;
-  float y = 1;
-  float e = 0.000001;
-  while(x-y>e)
-  {
-    x=(x + y)/2;
-    y=n/x;
-  }
-  return x;
+float sqrt(long N){
+    float x=0.0;
+    float y=0.0;
+    float z= N;
+    while(x*x<=N){
+        x=x++;
+    }
+    x= x--;
+    while (abs(x-y)>0.00001){
+        y=z/x;
+        x=(x+y)/2.0;
+    }
+    return x;
 }
-
 int main()
 {
-float n;
-cout<<"This program will calculate the square root of a number using the Babylonian method."<<endl;
-cout<<"Plese enter the number: "; cin>>n;
-cout<< "Here is the square root of your number: "<<sqrt(n)<<endl;
-return 0;
+  long n;
+  cout<<"Please enter a number to obtain its square root: "; cin>>n;
+  cout<<"The square root of the Number is: "<<sqrt(n)<<endl;
+  return 0;
 }
